@@ -1,0 +1,19 @@
+{
+    "extends": ["airbnb-base", "prettier", "plugin:node/recommended"],
+    "plugins": ["prettier"],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off",
+        "no-process-exit": "off",
+        "no-alert": "warn",
+        "object-shorthand": "off",
+        "class-methods-use-this": "off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+    }
+}
