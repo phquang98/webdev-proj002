@@ -7,7 +7,7 @@ import TransacList from "./components/TransacList";
 import AddTransac from "./components/AddTransac";
 import "./App.css";
 
-// asd
+// checking git hooks
 const App: FC = () => {
   return (
     <div>
