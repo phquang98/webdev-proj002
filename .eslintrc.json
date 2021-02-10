@@ -1,19 +1,56 @@
 {
-    "extends": ["airbnb", "prettier", "plugin:node/recommended"],
-    "plugins": ["prettier"],
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "rules": {
-        "prettier/prettier": "warn",
-        "no-unused-vars": "warn",
-        "no-console": "off",
-        "func-names": "off",
-        "no-process-exit": "off",
-        "no-alert": "warn",
-        "object-shorthand": "off",
-        "class-methods-use-this": "off",
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-var": "warn",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "spaced-comment": "error",
+    "no-magic-numbers": ["warn", { "ignoreArrayIndexes": true }], // controversial
+    "eqeqeq": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-function-return-type": ["warn"], // controversial
+    "@typescript-eslint/explicit-module-boundary-types": ["warn"], // controversial
+    "prettier/prettier": ["warn", {}, { "usePrettierrc": true }]
+  }
 }
