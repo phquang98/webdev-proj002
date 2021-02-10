@@ -50,7 +50,7 @@
       "npx prettier --write",
       "npx eslint --max-warnings 0 --cache --fix"
     ],
-    "./src/index.{ts,tsx}": [
+    "./src/App.tsx": [
       "npx prettier --write",
       "npx eslint --max-warnings 0 --cache --fix"
     ]
